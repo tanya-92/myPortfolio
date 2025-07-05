@@ -76,25 +76,26 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Real-time Process Monitoring Dashboard",
-      description: "Visualizes system processes in real-time with alerting features and live updates via APIs.",
-      category: "Dashboard",
-      date: "Mar 2025",
-      tech: ["HTML", "CSS", "JavaScript", "Python"],
-      github: "https://github.com/tanya/process-dashboard",
-      demo: "#",
-      image: "/profile.jpg?height=200&width=300",
-    },
-    {
       title: "Daily Challenge Bot",
       description: "Provides daily personalized challenges with motivational feedback.",
       category: "Web App",
       date: "Feb 2025",
       tech: ["HTML", "Tailwind CSS", "JavaScript", "APIs"],
-      github: "https://github.com/tanya/challenge-bot",
+      github: "https://github.com/tanya-92/Daily-Challenge-Bot",
       demo: "https://daily-challenge-bot.onrender.com",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/bot.png?height=200&width=300",
     },
+    {
+      title: "Real-time Process Monitoring Dashboard",
+      description: "Visualizes system processes in real-time with alerting features and live updates via APIs.",
+      category: "Dashboard",
+      date: "Mar 2025",
+      tech: ["HTML", "CSS", "JavaScript", "Python"],
+      github: "https://github.com/tanya-92/Real-time-Process-Monitoring-dashboard",
+      demo: "https://real-time-process-monitoring-dashboard-r55g.onrender.com",
+      image: "/rtpmd.png?height=200&width=300",
+    },
+    
     {
       title: "Agri-Commerce Platform for Farmers",
       description: "E-commerce site tailored for agricultural needs like seeds, fertilizers, etc.",
@@ -103,41 +104,65 @@ export default function Portfolio() {
       tech: ["HTML", "Tailwind CSS", "JavaScript"],
       github: "https://github.com/tanya/agri-commerce",
       demo: "#",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/farmer.png?height=200&width=300",
+    },
+    {
+      title: "E-Learning Platform",
+      description: "An educational platform for online learning resources, interactive tutorials, and self-paced assessments.",
+      category: "Dashboard",
+      date: "Nov 2024",
+      tech: ["HTML", "CSS", "JavaScript"],
+      github: "https://github.com/tanya/agri-commerce",
+      demo: "#",
+      image: "/mylearnspace.png?height=200&width=300",
     },
   ]
 
   const skills = {
     Languages: ["Java", "JavaScript", "HTML", "CSS", "C++"],
-    Frameworks: ["Bootstrap", "Tailwind CSS"],
+    "Frameworks & Tools": ["Bootstrap", "Tailwind CSS","React","Wordpress"],
     "Soft Skills": ["Problem-Solving", "Time Management", "Adaptability", "Team Collaboration"],
   }
 
   const certifications = [
     {
-      title: "Computer Programming of C",
+      title: "Java Programming",
+      issuer: "iamNeo",
+      date: "May 2025",
+      image: "/java.jpg?height=400&width=600",
+    },
+    {
+      title: "Cloud Computing",
+      issuer: "NPTEL",
+      date: "Apr 2025",
+      image: "/nptel.jpg?height=400&width=600",
+    },
+    {
+      title: "Object-Oriented Programming",
       issuer: "Neo Colab",
-      date: "May 2024",
-      image: "/placeholder.svg?height=400&width=600",
+      date: "Dec 2024",
+      image: "/cpp.jpg?height=400&width=600",
+    },
+    {
+      title: "Introduction to Hardware and Operating Systems",
+      issuer: "IBM Coursera",
+      date: "Sept 2024",
+      image: "/os.jpg?height=400&width=600",
     },
     {
       title: "Crash Course on Python",
       issuer: "Google Coursera",
       date: "March 2024",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/py.jpg?height=400&width=600",
     },
     {
       title: "Responsive Web Design",
       issuer: "Free Code Camp",
       date: "Nov 2023",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/fcc.jpg?height=400&width=600",
     },
-    {
-      title: "Offline Marketing for Customers",
-      issuer: "Infosys Springboard",
-      date: "Nov 2023",
-      image: "/placeholder.svg?height=400&width=600",
-    },
+    
+    
   ]
 
   const education = [
@@ -322,7 +347,7 @@ export default function Portfolio() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
               >
-                <motion.button
+                <motion.a href="https://github.com/tanya-92" target="_blank" rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`px-6 py-2 rounded-full font-semibold shadow-lg transition-all duration-300 text-sm ${
@@ -333,7 +358,7 @@ export default function Portfolio() {
                 >
                   <Github className="w-4 h-4 inline mr-2" />
                   GitHub
-                </motion.button>
+                </motion.a>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -403,72 +428,77 @@ export default function Portfolio() {
                 </motion.p>
 
                 <motion.div
-                  className="flex flex-wrap gap-3 justify-center lg:justify-start mt-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                >
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
-                      isDarkMode
-                        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                        : "bg-white text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
-                    <Download className="w-3 h-3 inline mr-2" />
-                    Resume
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
-                      isDarkMode
-                        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                        : "bg-white text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
-                    <Github className="w-3 h-3 inline mr-2" />
-                    GitHub
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
-                      isDarkMode
-                        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                        : "bg-white text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
-                    <Linkedin className="w-3 h-3 inline mr-2" />
-                    LinkedIn
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
-                      isDarkMode
-                        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                        : "bg-white text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
-                    <Twitter className="w-3 h-3 inline mr-2" />
-                    Gmail
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
-                      isDarkMode
-                        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                        : "bg-white text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
-                    <Instagram className="w-3 h-3 inline mr-2" />
-                    Instagram
-                  </motion.button>
-                </motion.div>
+  className="flex flex-wrap gap-3 justify-center lg:justify-start mt-6"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.8 }}
+>
+  {/* View Resume */}
+  <motion.a
+    href="/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
+      isDarkMode
+        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
+        : "bg-white text-gray-700 hover:bg-gray-50"
+    }`}
+  >
+    <Download className="w-3 h-3 inline mr-2" />
+    View Resume
+  </motion.a>
+
+  {/* GitHub */}
+  <motion.a
+    href="https://github.com/tanya-92"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
+      isDarkMode
+        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
+        : "bg-white text-gray-700 hover:bg-gray-50"
+    }`}
+  >
+    <Github className="w-3 h-3 inline mr-2" />
+    GitHub
+  </motion.a>
+
+  {/* LinkedIn */}
+  <motion.a
+    href="https://www.linkedin.com/in/tanya-yadav-a43580297/" // 🔁 Replace with your actual LinkedIn URL
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
+      isDarkMode
+        ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
+        : "bg-white text-gray-700 hover:bg-gray-50"
+    }`}
+  >
+    <Linkedin className="w-3 h-3 inline mr-2" />
+    LinkedIn
+  </motion.a>
+  <motion.button
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+  className={`px-4 py-2 rounded-full font-medium shadow-md transition-all duration-300 text-xs ${
+    isDarkMode
+      ? "bg-gray-700 text-gray-300 hover:bg-gray-600"
+      : "bg-white text-gray-700 hover:bg-gray-50"
+  }`}
+>
+  <Briefcase className="w-3 h-3 inline mr-2" />
+  Contact Me
+</motion.button>
+
+</motion.div>
+
               </div>
             </motion.div>
           </div>
